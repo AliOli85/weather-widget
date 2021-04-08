@@ -1,5 +1,5 @@
 a {
-  color: #276678;
+  color: #f6f6f6;
   text-decoration: none;
 }
 
@@ -28,6 +28,7 @@ p {
 .active {
   color: #f4f9f9;
   cursor: default;
+  font-weight: bold;
 }
 
 .weather-box {
@@ -72,10 +73,11 @@ p {
   border-color: #aaaaaa;
 }
 
-a:hover {
+.link:hover {
   color: #276678;
 }
 
 .active:hover {
   text-decoration: none;
+  color: #f6f6f6;
 }
