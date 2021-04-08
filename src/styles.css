@@ -25,6 +25,11 @@ p {
   margin: 25px 0px 0px;
 }
 
+.active {
+  color: #f4f9f9;
+  cursor: default;
+}
+
 .weather-box {
   box-sizing: border-box;
   box-shadow: 0px 2px 2px 1px rgba(102, 101, 101, 0.2);
@@ -68,5 +73,9 @@ p {
 }
 
 a:hover {
-  color: #14274e;
+  color: #276678;
+}
+
+.active:hover {
+  text-decoration: none;
 }
