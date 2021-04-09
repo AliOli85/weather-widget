@@ -44,6 +44,11 @@ p {
   margin: 15px 0px -15px;
 }
 
+.weather-icon {
+  width: 50%;
+  height: 50%;
+}
+
 .btn-secondary {
   background-color: #f6f6f6;
   color: #276678;
