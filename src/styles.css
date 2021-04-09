@@ -17,7 +17,7 @@ h3 {
   margin: 0px;
 }
 h6 {
-  margin: 0px;
+  margin: 15px;
   font-size: 20px;
 }
 
@@ -40,10 +40,8 @@ p {
   background-color: #94b5c0;
 }
 
-.fa-cloud-rain {
-  font-size: 70px;
-  margin: 25px 0px 10px;
-  color: #f4f9f9;
+.main-weather-icon {
+  margin: 15px 0px -15px;
 }
 
 .btn-secondary {
