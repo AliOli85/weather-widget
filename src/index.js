@@ -36,6 +36,7 @@ currentTime.innerHTML = `${hours}:${minutes}h`;
 
 function showWeather(response) {
   celsiusTemp = response.data.main.temp;
+  let iconElement = document.querySelector("#icon");
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(celsiusTemp);
 
@@ -46,6 +47,39 @@ function showWeather(response) {
   document.querySelector("#clouds").innerHTML = response.data.clouds.all;
 
   document.querySelector("#main").innerHTML = response.data.weather[0].main;
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+}
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+    <div class="weather-forecast-date">${day}</div>
+    <img 
+    src="http://openweathermap.org/img/wn/04d.png"
+    alt=""
+    width="42"
+    />
+    <div class="weather-forecast-temperatures">
+    <span class="weather-forecast-temperature-max">18°</span>
+    <span class="weather-forecast-temperature-min">12°</span>
+    </div>
+    </div>
+    `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function searchCity(city) {
@@ -78,6 +112,8 @@ function showFahrenheit(event) {
   let temperatureElement = document.querySelector("#temperature");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
+  celsiusLink.classList.add("link");
+  fahrenheitLink.classList.remove("link");
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
@@ -86,6 +122,8 @@ function showCelsius(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.remove("link");
+  fahrenheitLink.classList.add("link");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
@@ -105,3 +143,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsius);
 
 searchCity("Madrid");
+displayForecast();

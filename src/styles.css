@@ -36,9 +36,19 @@ small {
   font-weight: bold;
 }
 
-.day {
+.weather-forecast {
+  text-align: center;
+}
+.weather-forecast-date {
   font-size: 16px;
 }
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+.weather-forecast-temperature-max {
+  font-weight: bold;
+}
+
 .degrees {
   font-size: 13px;
 }
