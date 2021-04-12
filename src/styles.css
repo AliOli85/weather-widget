@@ -36,6 +36,16 @@ small {
   font-weight: bold;
 }
 
+.day {
+  font-size: 16px;
+}
+.degrees {
+  font-size: 13px;
+}
+.degrees-max {
+  font-weight: bold;
+}
+
 .weather-box {
   box-sizing: border-box;
   box-shadow: 0px 2px 2px 1px rgba(102, 101, 101, 0.2);
