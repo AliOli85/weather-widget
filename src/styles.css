@@ -80,27 +80,28 @@ small {
 }
 
 .btn-secondary {
-  background-color: #f6f6f6;
-  color: #276678;
-  border-color: #f6f6f6;
-  border-radius: 0.25rem;
+  border: 0;
+  background-color: transparent;
 }
 
 .btn-info {
   background-color: #276678;
   color: #f6f6f6;
   border-color: #f6f6f6;
-  border-radius: 0.25rem;
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
 }
 
 .btn-secondary:hover {
-  background-color: #aaaaaa;
-  color: #f6f6f6;
   cursor: pointer;
-  border-color: #f6f6f6;
+  background-color: transparent;
+}
+
+svg:hover {
+  fill: #276678;
 }
 .btn-info:hover {
-  background-color: #aaaaaa;
+  background-color: #f6f6f6;
   color: #276678;
   cursor: pointer;
   border-color: #aaaaaa;
